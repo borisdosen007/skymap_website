@@ -1,4 +1,7 @@
+import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
+import SplashScreen from "@/components/SplashScreen";
+import FloatingButton from "@/components/FloatingButton";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import HowToOrder from "@/components/HowToOrder";
@@ -10,6 +13,8 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <SplashScreen />
+      <AnnouncementBar />
       <Header />
       <main>
         <Hero />
@@ -20,6 +25,7 @@ export default function Home() {
         <Quote />
       </main>
       <Footer />
+      <FloatingButton />
     </>
   );
 }

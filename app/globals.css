@@ -8,8 +8,15 @@
   }
 
   body {
-    @apply bg-night-950 text-white;
-    font-family: system-ui, -apple-system, sans-serif;
+    @apply bg-night-950 text-white font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-dm-serif), Georgia, serif;
+  }
+
+  p {
+    @apply font-sans;
   }
 }
 

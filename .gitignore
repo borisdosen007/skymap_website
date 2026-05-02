@@ -11,6 +11,9 @@ node_modules/
 # production
 /build
 
+# claude local settings
+.claude/settings.local.json
+
 # misc
 .DS_Store
 *.pem

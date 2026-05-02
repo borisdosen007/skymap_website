@@ -23,15 +23,21 @@ const config: Config = {
         star: "#fffde7",
       },
       fontFamily: {
-        serif: ["Georgia", "Cambria", "serif"],
-        sans: ["system-ui", "sans-serif"],
+        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        display: ["var(--font-dm-serif)", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       animation: {
         "twinkle": "twinkle 3s ease-in-out infinite",
         "fade-in": "fadeIn 1s ease-out forwards",
         "slide-up": "slideUp 0.8s ease-out forwards",
+        "marquee": "marquee 18s linear infinite",
       },
       keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         twinkle: {
           "0%, 100%": { opacity: "0.3", transform: "scale(0.8)" },
           "50%": { opacity: "1", transform: "scale(1.2)" },
