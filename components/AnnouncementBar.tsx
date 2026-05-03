@@ -1,9 +1,25 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 export default function AnnouncementBar() {
+  const ref = useRef<HTMLDivElement>(null);
   const text = "BESPLATNA DOSTAVA ZA 2+ NARUDŽBE";
   const items = Array(8).fill(text);
 
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onScroll = () => {
+      const { bottom, height } = el.getBoundingClientRect();
+      el.style.opacity = String(Math.max(0, bottom / height));
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div className="w-full bg-night-800 border-b border-white/5 overflow-hidden py-1.5">
+    <div ref={ref} className="w-full bg-night-800 border-b border-white/5 overflow-hidden py-1.5">
       <style>{`
         @keyframes marquee-scroll {
           0%   { transform: translateX(0); }

@@ -9,8 +9,8 @@ export default function SplashScreen() {
   const [phase, setPhase] = useState<Phase>("visible");
 
   useEffect(() => {
-    const t1 = setTimeout(() => setPhase("moving"), 400);
-    const t2 = setTimeout(() => setPhase("hidden"), 950);
+    const t1 = setTimeout(() => setPhase("moving"), 1400);
+    const t2 = setTimeout(() => setPhase("hidden"), 1950);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);

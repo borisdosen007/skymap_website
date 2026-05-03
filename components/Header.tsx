@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="fixed top-[37px] left-0 right-0 z-50 px-3">
+    <header className="sticky top-0 z-50 w-full">
       <div
-        className="max-w-screen-sm mx-auto h-14 grid grid-cols-3 items-center px-4 rounded-lg border border-white/10 backdrop-blur-sm"
+        className="w-full h-14 grid grid-cols-3 items-center px-4 border-b border-white/10 backdrop-blur-sm"
         style={{
           backgroundImage: "url('/images/1080x1080 pozadina.png')",
           backgroundSize: "cover",
