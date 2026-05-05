@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative h-screen overflow-hidden">
       {/* Background slika */}
       <Image
-        src="/images/pozadina par.jpeg"
+        src="/images/novaPozadina.jpg"
         alt="Zvjezdano nebo"
         fill
         className="object-cover object-center"
