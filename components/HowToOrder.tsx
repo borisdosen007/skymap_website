@@ -25,12 +25,9 @@ const steps = [
   },
 ];
 
-const CARD_PEEK = 10; // px — koliko prethodne kartice vire iznad sljedeće
-const CARD_TOP_BASE = 80; // px od vrha viewporta (ispod header-a)
-
 export default function HowToOrder() {
   return (
-    <section className="px-5 pt-16 pb-16 bg-night-950">
+    <section className="px-5 pt-16 bg-night-950">
       <div className="max-w-screen-sm mx-auto">
         {/* Label */}
         <p className="text-gold-400 text-xs uppercase tracking-[0.3em] text-center mb-3 font-medium">
@@ -44,26 +41,24 @@ export default function HowToOrder() {
           Pošaljite nam poruku na Instagramu u 4 jednostavna koraka
         </p>
 
-        {/* Stacking cards */}
+        {/* Stacking cards — svaka kartica ima ~50vh scroll zone via marginBottom */}
         <div className="relative">
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="sticky bg-night-800 rounded-2xl border border-white/10 p-6 mb-4 shadow-2xl"
+              className="sticky bg-night-800 rounded-2xl border border-white/10 p-6 shadow-2xl"
               style={{
-                top: `${CARD_TOP_BASE + index * CARD_PEEK}px`,
+                top: `calc(50vh - 80px + ${index * 10}px)`,
                 zIndex: index + 1,
+                marginBottom: index < steps.length - 1 ? "50vh" : "0",
               }}
             >
               <div className="flex items-start gap-4">
-                {/* Step number */}
                 <div className="w-11 h-11 rounded-full bg-night-900 border border-gold-400/40 flex items-center justify-center flex-shrink-0">
                   <span className="text-gold-400 text-xs font-bold">
                     {step.number}
                   </span>
                 </div>
-
-                {/* Content */}
                 <div className="pt-1">
                   <h3 className="text-white font-semibold text-sm mb-1">
                     {step.title}
@@ -78,7 +73,10 @@ export default function HowToOrder() {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 text-center" style={{ position: "relative", zIndex: 10 }}>
+        <div
+          className="mt-16 pb-16 text-center"
+          style={{ position: "relative", zIndex: 20 }}
+        >
           <a
             href="https://www.instagram.com/skymap.bih"
             target="_blank"
