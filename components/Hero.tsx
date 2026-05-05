@@ -30,7 +30,7 @@ export default function Hero() {
           Savršen poklon za{" "}
           <span className="text-gradient-gold italic">voljenu osobu</span>
         </h1>
-        <p className="text-white/55 text-sm leading-relaxed max-w-[280px]">
+        <p className="text-white/55 text-base leading-relaxed max-w-[280px]">
           Personalizovana karta zvijezda tačno onakvih kakve su bile u vašem posebnom trenutku.
         </p>
 
