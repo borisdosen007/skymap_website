@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background slika */}
       <Image
         src="/images/novaPozadina.jpg"
-        alt="Zvjezdano nebo"
+        alt="Personalizovana karta zvjezdanog neba – poklon za rođendan, godišnjicu i vjenčanje"
         fill
         className="object-cover object-center"
         priority
@@ -27,11 +27,11 @@ export default function Hero() {
           Zvjezdano nebo
         </p>
         <h1 className="text-4xl text-white leading-tight">
-          Savršen poklon za{" "}
-          <span className="text-gradient-gold italic">voljenu osobu</span>
+          Originalan poklon za{" "}
+          <span className="text-gradient-gold italic">rođendan, godišnjicu i vjenčanje</span>
         </h1>
         <p className="text-white/55 text-base leading-relaxed max-w-[280px]">
-          Personalizovana karta zvijezda tačno onakvih kakve su bile u vašem posebnom trenutku.
+          Personalizovana karta zvijezda baš onakvih kakve su bile u trenutku koji čuvate – jedinstven poklon za voljenu osobu.
         </p>
 
       </div>

@@ -22,16 +22,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Skymap BiH – Personalizovano zvjezdano nebo | Savršen poklon",
+  title: "Originalan poklon za rođendan, godišnjicu i vjenčanje | Skymap BiH",
   description:
-    "Poklonite nezaboravno iskustvo – personalizovana karta zvjezdanog neba za poseban datum i lokaciju. Idealno za godišnjice, rođendane, vjenčanja i prve susrete.",
+    "Personalizovana karta zvjezdanog neba za poseban datum i lokaciju – originalan i jedinstven poklon za rođendan, godišnjicu, vjenčanje ili prvi susret.",
   keywords: [
-    "zvjezdano nebo",
-    "star map",
-    "personalizovani poklon",
-    "mapa zvijezda",
+    "poklon za rođendan",
     "poklon za godišnjicu",
     "poklon za vjenčanje",
+    "originalan poklon",
+    "personalizovani poklon",
+    "jedinstven poklon",
+    "zvjezdano nebo",
+    "mapa zvijezda",
+    "star map",
     "skymap BiH",
     "Bosna i Hercegovina",
   ],
@@ -42,15 +45,15 @@ export const metadata: Metadata = {
     locale: "bs_BA",
     url: "https://skymapbih.com",
     siteName: "Skymap BiH",
-    title: "Skymap BiH – Personalizovano zvjezdano nebo",
+    title: "Originalan poklon za rođendan, godišnjicu i vjenčanje | Skymap BiH",
     description:
-      "Poklonite nezaboravno iskustvo – personalizovana karta zvjezdanog neba za poseban datum i lokaciju.",
+      "Personalizovana karta zvjezdanog neba za poseban datum i lokaciju – originalan poklon za rođendan, godišnjicu ili vjenčanje.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Skymap BiH – Personalizovano zvjezdano nebo",
+    title: "Originalan poklon za rođendan, godišnjicu i vjenčanje | Skymap BiH",
     description:
-      "Poklonite nezaboravno iskustvo – personalizovana karta zvjezdanog neba za poseban datum i lokaciju.",
+      "Personalizovana karta zvjezdanog neba za poseban datum i lokaciju – originalan poklon za rođendan, godišnjicu ili vjenčanje.",
   },
   robots: {
     index: true,
