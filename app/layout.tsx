@@ -65,6 +65,21 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Personalizovana karta zvjezdanog neba",
+  description:
+    "Originalan i jedinstven poklon za rođendan, godišnjicu, vjenčanje i prvi susret. Personalizovana karta zvijezda za vaš poseban datum i lokaciju.",
+  brand: { "@type": "Brand", name: "Skymap BiH" },
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceCurrency: "BAM",
+    seller: { "@type": "Organization", name: "Skymap BiH" },
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -72,6 +87,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="bs" className={`${playfair.variable} ${dmSerif.variable} ${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );

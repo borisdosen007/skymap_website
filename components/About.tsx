@@ -14,7 +14,7 @@ export default function About() {
           O nama
         </p>
         <h2 className="text-2xl font-bold text-white text-center mb-2">
-          Šta je zvjezdano nebo?
+          Jedinstven poklon za svaki poseban trenutak
         </h2>
         <div className="section-divider" />
 
@@ -38,7 +38,7 @@ export default function About() {
 
         {/* Occasions */}
         <p className="text-white/40 text-xs uppercase tracking-widest text-center mb-4">
-          Idealno za
+          Poklon za svaku prigodu
         </p>
         <div className="grid grid-cols-2 gap-3">
           {occasions.map((item) => (
