@@ -1,12 +1,18 @@
 export default function Quote() {
   return (
-    <section className="px-5 py-16 bg-night-900 relative overflow-hidden">
+    <section
+      className="px-5 py-16 bg-night-900 relative overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/pozadina par.jpeg')" }}
+    >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-night-900/80 pointer-events-none" />
+
       {/* Decorative stars */}
       <div className="absolute top-8 left-8 text-gold-400/20 text-4xl pointer-events-none">✦</div>
       <div className="absolute bottom-8 right-8 text-gold-400/15 text-2xl pointer-events-none">★</div>
       <div className="absolute top-1/2 right-6 text-gold-400/10 text-5xl pointer-events-none">✦</div>
 
-      <div className="max-w-screen-sm mx-auto text-center">
+      <div className="relative max-w-screen-sm mx-auto text-center">
         {/* Quote mark */}
         <div className="text-gold-400/30 text-6xl font-serif leading-none mb-4 select-none">
           "
