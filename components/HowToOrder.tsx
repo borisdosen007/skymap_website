@@ -25,9 +25,12 @@ const steps = [
   },
 ];
 
+const CARD_PEEK = 10; // px — koliko prethodne kartice vire iznad sljedeće
+const CARD_TOP_BASE = 80; // px od vrha viewporta (ispod header-a)
+
 export default function HowToOrder() {
   return (
-    <section className="px-5 py-16 bg-night-950">
+    <section className="px-5 pt-16 pb-16 bg-night-950">
       <div className="max-w-screen-sm mx-auto">
         {/* Label */}
         <p className="text-gold-400 text-xs uppercase tracking-[0.3em] text-center mb-3 font-medium">
@@ -41,25 +44,27 @@ export default function HowToOrder() {
           Pošaljite nam poruku na Instagramu u 4 jednostavna koraka
         </p>
 
-        {/* Steps */}
+        {/* Stacking cards */}
         <div className="relative">
-          {/* Vertical connector line */}
-          <div className="absolute left-[22px] top-6 bottom-6 w-px bg-gradient-to-b from-gold-400/40 via-gold-400/20 to-transparent" />
-
-          <div className="flex flex-col gap-7">
-            {steps.map((step, index) => (
-              <div key={step.number} className="flex gap-4">
-                {/* Step number circle */}
-                <div className="relative flex-shrink-0">
-                  <div className="w-11 h-11 rounded-full bg-night-800 border border-gold-400/40 flex items-center justify-center">
-                    <span className="text-gold-400 text-xs font-bold">
-                      {step.number}
-                    </span>
-                  </div>
+          {steps.map((step, index) => (
+            <div
+              key={step.number}
+              className="sticky bg-night-800 rounded-2xl border border-white/10 p-6 mb-4 shadow-2xl"
+              style={{
+                top: `${CARD_TOP_BASE + index * CARD_PEEK}px`,
+                zIndex: index + 1,
+              }}
+            >
+              <div className="flex items-start gap-4">
+                {/* Step number */}
+                <div className="w-11 h-11 rounded-full bg-night-900 border border-gold-400/40 flex items-center justify-center flex-shrink-0">
+                  <span className="text-gold-400 text-xs font-bold">
+                    {step.number}
+                  </span>
                 </div>
 
                 {/* Content */}
-                <div className="pt-2 pb-1">
+                <div className="pt-1">
                   <h3 className="text-white font-semibold text-sm mb-1">
                     {step.title}
                   </h3>
@@ -68,12 +73,12 @@ export default function HowToOrder() {
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-10 text-center">
+        <div className="mt-10 text-center" style={{ position: "relative", zIndex: 10 }}>
           <a
             href="https://www.instagram.com/skymap.bih"
             target="_blank"
