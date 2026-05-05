@@ -5,10 +5,10 @@ export default function Hero() {
     <section className="relative h-screen overflow-hidden">
       {/* Background slika */}
       <Image
-        src="/images/pozadina par.jpeg"
+        src="/images/1080x1080 pozadina.png"
         alt="Zvjezdano nebo"
         fill
-        className="object-cover object-[20%_top]"
+        className="object-cover object-center"
         priority
       />
 
